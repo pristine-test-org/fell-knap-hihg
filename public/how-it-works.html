@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Fell Knap works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; }
+      header, main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: #2f7d4f; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #e0a526);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .steps { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+      .steps li {
+        padding: 0.9rem 1rem;
+        border-radius: 0.5rem;
+        /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette. */
+        background: #d94fa0;
+        color: #fff;
+      }
+      .note {
+        /* Intentional, for Impeccable's test drive: low-contrast text, light grey on near-white. */
+        color: #c8c8c4;
+      }
+      .back {
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px;
+      }
+      .meter {
+        height: 0.5rem;
+        width: 30%;
+        background: #2f7d4f;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .meter:hover { width: 100%; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { margin: 0; padding: 0; max-width: none; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">Fell Knap</a>
+    </header>
+    <main>
+      <h1>How Fell Knap works</h1>
+      <p class="edge">Fell Knap keeps one shared list for your whole team. Add an item, tick it off when it is done, and everyone sees the change the next time they open the page.</p>
+      <ol class="steps">
+        <li>Add an item to the shared list.</li>
+        <li>Tick it off when it is finished.</li>
+        <li>Open the page to see the latest list.</li>
+      </ol>
+      <div class="meter" aria-hidden="true"></div>
+      <p class="note">The list shows the five most recent items.</p>
+      <a class="back" href="/">Back to the landing page</a>
+    </main>
+  </body>
+</html>
